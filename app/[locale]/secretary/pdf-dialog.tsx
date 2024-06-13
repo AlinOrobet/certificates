@@ -34,7 +34,7 @@ const PdfDialog = ({
   userSession,
   id,
   scop,
-  dataCerere,
+
   numarInregistare,
 }: Props) => {
   const t = useTranslations();
@@ -43,12 +43,14 @@ const PdfDialog = ({
   const data = overviewQuery.data || {};
 
   const studentsQuery = useGetStudents({userSession});
-  const students = studentsQuery.data || [];
-  const studentData = students?.find((student: any) => student.numeComplet === title);
+  const studentData = (studentsQuery?.data || [])?.find(
+    (student: any) => student.numeComplet === title
+  );
 
   const secretariesQuery = useGetSecretaries({userSession});
-  const secretaries = secretariesQuery.data || [];
-  const secretar = secretaries?.find((secretar: any) => secretar.email === "orobet.alin@gmail.com");
+  const secretar = (secretariesQuery?.data || [])?.find(
+    (secretar: any) => secretar.email === "orobet.alin@gmail.com"
+  );
 
   if (!data || !secretar || !studentData) {
     return null;
