@@ -88,7 +88,7 @@
   "CERTIFICATE_REJECTED": "Acest certificat a fost respins",
   "CERTIFICATE_APROVED": "Acest certificat a fost aprobat cu succes",
   "ADD_REASON": "Motivați alegerea",
-  "WHY_REJECT_THIS_CERTIFICATE": "De ce respingi acest certificat",
+  "WHY_REJECT_THIS_CERTIFICATE": "De ce respingi acest certificat ?",
   "ADD_NR_INREGISTRARE": "Adaugă numărul de înregistrare",
   "NR_INREGISTRARE_SUCCES": "Numărul de înregistrare a fost aplicat",
   "NR_INREGISTRARE_FAILD": "Actualizarea numărului de înregistrare a eșuat",

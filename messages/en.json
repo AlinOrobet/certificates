@@ -85,7 +85,7 @@
   "CERTIFICATE_REJECTED": "This certificate was rejected",
   "CERTIFICATE_APROVED": "This certificate was successfully approved",
   "ADD_REASON": "Motivate your choice",
-  "WHY_REJECT_THIS_CERTIFICATE": "Why are you rejecting this certificate",
+  "WHY_REJECT_THIS_CERTIFICATE": "Why are you rejecting this certificate ?",
   "ADD_NR_INREGISTRARE": "Add registre id",
   "NR_INREGISTRARE_SUCCES": "Nr registration was applied",
   "NR_INREGISTRARE_FAILD": "Failed to update nr registration",

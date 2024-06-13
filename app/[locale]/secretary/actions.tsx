@@ -72,7 +72,7 @@ export const Actions = ({id, scop}: Props) => {
         isOpen={isOpen}
         handleCancel={() => setIsOpen(false)}
         title="ADD_REASON"
-        message="WHY_REJECT_THIS_CERTIFICATE"
+        message={t("WHY_REJECT_THIS_CERTIFICATE")}
         handleConfirm={(motiv?: string) => {
           rejectMutation.mutate({motiv});
           setIsOpen(false);
