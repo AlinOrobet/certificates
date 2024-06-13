@@ -11,8 +11,8 @@ import {
 import {useGetOverviewInfo} from "@/features/admin/api/use-get-overview-info";
 import {useGetSecretaries} from "@/features/admin/api/use-get-secretaries";
 import {useGetStudents} from "@/features/admin/api/use-get-students";
-import {useGetId} from "@/features/secretary/api/use-get-id";
-import {Document, Page, Text, View, StyleSheet, PDFViewer} from "@react-pdf/renderer";
+
+import {Document, Page, Text, View, PDFViewer} from "@react-pdf/renderer";
 
 import {useTranslations} from "next-intl";
 
@@ -44,11 +44,15 @@ const PdfDialog = ({
 
   const studentsQuery = useGetStudents({userSession});
   const students = studentsQuery.data || [];
-  const studentData = students.find((student: any) => student.numeComplet === title);
+  const studentData = students?.find((student: any) => student.numeComplet === title);
 
   const secretariesQuery = useGetSecretaries({userSession});
   const secretaries = secretariesQuery.data || [];
-  const secretar = secretaries.find((secretar: any) => secretar.email === "orobet.alin@gmail.com");
+  const secretar = secretaries?.find((secretar: any) => secretar.email === "orobet.alin@gmail.com");
+
+  if (!data || !secretar || !studentData) {
+    return null;
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={handleCancel}>
